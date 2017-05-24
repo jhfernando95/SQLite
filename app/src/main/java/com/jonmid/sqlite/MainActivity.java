@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     List<User> userList;
     AdapterUser adapterUser;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
