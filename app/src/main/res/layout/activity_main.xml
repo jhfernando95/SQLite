@@ -22,6 +22,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Crear usuario"
+                android:onClick="onShowAccount"
                 android:layout_weight="1"/>
             <Button
                 android:id="@+id/id_btn_list"

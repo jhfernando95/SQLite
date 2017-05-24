@@ -1,5 +1,6 @@
 package com.jonmid.sqlite;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -34,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         dataUser = new DataUser(this);
         dataUser.open();
 
-        create.setOnClickListener(new View.OnClickListener() {
+        /*create.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 createData();
@@ -44,17 +45,24 @@ public class MainActivity extends AppCompatActivity {
         listbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                userList = dataUser.findAll();
-                adapterUser = new AdapterUser(getApplicationContext(), userList);
-                lista.setAdapter(adapterUser);
+
             }
-        });
+        });*/
+        userList = dataUser.findAll();
+        adapterUser = new AdapterUser(getApplicationContext(), userList);
+        lista.setAdapter(adapterUser);
     }
 
-    private void createData(){
+
+    /*private void createData() {
         User user = new User();
         user.setName("jonmid");
         user.setEmail("jamideros@hotmail.com");
         dataUser.create(user);
+    }*/
+
+    public void onShowAccount(View view) {
+        Intent intent = new Intent(this, CreateUserActivity.class);
+        startActivity(intent);
     }
 }
