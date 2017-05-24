@@ -1,11 +1,12 @@
 package com.jonmid.sqlite;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ListView;
+
 
 import com.jonmid.sqlite.Data.DataUser;
 import com.jonmid.sqlite.Models.User;
@@ -31,6 +32,8 @@ public class CreateUserActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 createData();
+                onShowAccount2();
+
             }
         });
     }
@@ -43,5 +46,9 @@ public class CreateUserActivity extends AppCompatActivity {
 
     }
 
+    public void onShowAccount2(View view) {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
 
 }
