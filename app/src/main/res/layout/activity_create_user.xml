@@ -45,15 +45,25 @@
                     android:hint="@string/str_tie_name" />
             </android.support.design.widget.TextInputLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
 
             <Button
-                android:id="@+id/id_btn_joinUs"
+                android:id="@+id/id_btn_returne"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Crear Cuenta"
-                android:onClick="onShowAccoun2"/>
+                android:onClick="lNext"
+                />
+
+            </LinearLayout>
 
         </LinearLayout>
+
     </ScrollView>
 
 </android.support.design.widget.CoordinatorLayout>

@@ -21,7 +21,7 @@ public class CreateUserActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_user);
 
-        create = (Button) findViewById(R.id.id_btn_joinUs);
+        create = (Button) findViewById(R.id.id_btn_returne);
         name = (EditText) findViewById(R.id.id_tie_name);
         email = (EditText) findViewById(R.id.id_tie_email);
         dataUser = new DataUser(this);
@@ -32,7 +32,10 @@ public class CreateUserActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 createData();
-                onShowAccount2();
+                lNext();
+
+
+
 
             }
         });
@@ -46,7 +49,7 @@ public class CreateUserActivity extends AppCompatActivity {
 
     }
 
-    public void onShowAccount2(View view) {
+    public void lNext () {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
